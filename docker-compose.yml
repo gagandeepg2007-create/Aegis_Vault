@@ -1,0 +1,23 @@
+services:
+  web_app:
+    build: .
+    container_name: secure_web_app_container
+    # Explicitly mapping ports ensures ngrok can bridge to the Flask server
+    ports:
+      - "5000:5000"
+    # Injects your PINATA_JWT and SECRET_KEY from your .env file
+    env_file:
+      - .env
+    # Resource limits to test your 'Stateless RAM' alerts
+    deploy:
+      resources:
+        limits:
+          memory: 1G
+    # Ensures the vault stays online if the Docker engine restarts
+    restart: always
+    # Added Healthcheck to verify the engine is responsive
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000/api/status"]
+      interval: 30s
+      timeout: 10s
+      retries: 3

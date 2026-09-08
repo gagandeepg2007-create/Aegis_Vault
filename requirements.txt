@@ -1,0 +1,16 @@
+# Web Server & Security
+Flask==3.0.0
+flask-limiter==3.5.0
+requests==2.31.0
+python-dotenv==1.0.0
+
+# Cryptography & Security Engine
+cryptography==41.0.5
+
+# System Monitoring (Telemetry)
+psutil==5.9.6
+
+# Performance & Concurrency
+gunicorn==21.2.0
+# Add this to your requirements.txt
+APScheduler==3.10.4
