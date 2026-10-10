@@ -3,11 +3,10 @@ import time
 import psutil
 import threading
 import logging
-import requests
 import io
 import gc 
-import re 
-from flask import Flask, render_template, request, send_file, jsonify, flash, redirect, url_for
+import requests
+from flask import Flask, render_template, request, send_file, jsonify
 from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
 from apscheduler.schedulers.background import BackgroundScheduler
@@ -17,8 +16,17 @@ from cryptography.hazmat.primitives.kdf.pbkdf2 import PBKDF2HMAC
 from cryptography.hazmat.backends import default_backend
 from base64 import urlsafe_b64encode
 
-# Configure logging
-logging.basicConfig(level=logging.INFO, format='%(asctime)s [%(levelname)s] %(message)s')
+# Setup in-memory log capture stream for security log downloads
+log_stream = io.StringIO()
+class StreamHandler(logging.StreamHandler):
+    def emit(self, record):
+        super().emit(record)
+        log_stream.write(self.format(record) + "\n")
+
+stream_handler = StreamHandler()
+stream_handler.setFormatter(logging.Formatter('%(asctime)s [%(levelname)s] %(message)s'))
+
+logging.basicConfig(level=logging.INFO, handlers=[logging.StreamHandler(), stream_handler])
 
 app = Flask(__name__)
 app.secret_key = os.environ.get("SECRET_KEY", os.urandom(24))
@@ -58,7 +66,6 @@ scheduler.start()
 
 @app.route('/')
 def landing_page():
-    # Fallback check for template name variance
     try:
         return render_template('main_landing_page.html')
     except Exception:
@@ -80,10 +87,27 @@ def api_clear_cache():
     mem_before = psutil.virtual_memory().percent
     gc.collect()
     mem_after = psutil.virtual_memory().percent
+    logging.info(f"RAM Purged via API: Dropped from {mem_before}% to {mem_after}%")
     return jsonify({
-        "memory_before": mem_before,
-        "memory_after": mem_after
+        "memory_before": round(mem_before, 1),
+        "memory_after": round(mem_after, 1)
     })
+
+@app.route('/api/download_audit', methods=['GET'])
+def api_download_audit():
+    logs_content = log_stream.getvalue()
+    if not logs_content.strip():
+        logs_content = "Aegis Vault Security Audit Log Initialized. No events recorded yet."
+    
+    output = io.BytesIO(logs_content.encode('utf-8'))
+    output.seek(0)
+    
+    return send_file(
+        output,
+        as_attachment=True,
+        download_name="aegis_security_audit_log.txt",
+        mimetype="text/plain"
+    )
 
 @app.route('/api/encrypt', methods=['POST'])
 @limiter.limit("10 per minute")
@@ -105,6 +129,7 @@ def api_encrypt():
     output.write(encrypted_data)
     output.seek(0)
     
+    logging.info(f"File encrypted successfully: {file.filename}")
     return send_file(
         output,
         as_attachment=True,
@@ -138,6 +163,7 @@ def api_decrypt():
         else:
             original_name = "recovered_file"
 
+        logging.info(f"File decrypted successfully: {original_name}")
         return send_file(
             output,
             as_attachment=True,
@@ -145,6 +171,7 @@ def api_decrypt():
             mimetype="application/octet-stream"
         )
     except (InvalidToken, Exception):
+        logging.warning("Decryption failed: Invalid decryption key or corrupted payload.")
         return jsonify({"error": "Invalid decryption key or corrupted file package."}), 400
 
 @app.route('/api/encrypt_cloud', methods=['POST'])
@@ -172,12 +199,13 @@ def api_encrypt_cloud():
             )
             if res.status_code == 200:
                 cid = res.json().get("IpfsHash")
+                logging.info(f"Cloud broadcast successful. CID: {cid}")
                 return jsonify({"cid": cid})
         except Exception:
             pass
 
-    # Simulated fallback CID if Pinata key is absent
     simulated_cid = "Qm" + os.urandom(21).hex()
+    logging.info(f"Cloud broadcast simulated. CID: {simulated_cid}")
     return jsonify({"cid": simulated_cid})
 
 @app.route('/api/decrypt_cid', methods=['POST'])
@@ -205,6 +233,7 @@ def api_decrypt_cid():
         output = io.BytesIO(decrypted_data)
         output.seek(0)
         
+        logging.info(f"Cloud recovery & auto-burn executed for CID: {cid}")
         return send_file(
             output,
             as_attachment=True,
@@ -212,6 +241,7 @@ def api_decrypt_cid():
             mimetype="application/octet-stream"
         )
     except Exception:
+        logging.warning(f"Cloud decryption failed for CID: {cid}")
         return jsonify({"error": "Decryption failed or invalid CID/password combo."}), 400
 
 if __name__ == '__main__':
