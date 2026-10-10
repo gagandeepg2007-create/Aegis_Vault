@@ -117,8 +117,11 @@ def get_status():
 
 @app.route('/')
 def landing_page():
-    """Render the main landing page first."""
-    return render_template('main_landing_page.html')
+    """Render the main landing page first, with fallback to index if templates are flat."""
+    try:
+        return render_template('main_landing_page.html')
+    except Exception:
+        return render_template('index.html')
 
 @app.route('/app')
 def operational_app():
