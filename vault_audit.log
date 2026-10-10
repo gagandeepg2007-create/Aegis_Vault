@@ -1251,3 +1251,131 @@
 2026-01-28 10:31:50,167 [INFO] System Health Update -> CPU: 10.3% | RAM: 78.6%
 2026-01-28 10:32:49,789 [INFO] System Health Update -> CPU: 14.6% | RAM: 74.8%
 2026-01-28 10:32:50,169 [INFO] System Health Update -> CPU: 14.5% | RAM: 74.9%
+2026-10-10 14:48:30,466 [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-10-10 14:48:30,469 [INFO] Added job "rotate_logs" to job store "default"
+2026-10-10 14:48:30,470 [INFO] Scheduler started
+2026-10-10 14:48:30,474 [INFO] System Health Update -> CPU: 0.0% | RAM: 89.5%
+2026-10-10 14:48:30,478 [INFO] AEGIS VAULT v2.5 SYSTEM ONLINE
+2026-10-10 14:48:30,511 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.40:5000
+2026-10-10 14:48:30,512 [INFO] [33mPress CTRL+C to quit[0m
+2026-10-10 14:48:30,514 [INFO]  * Restarting with stat
+2026-10-10 14:48:31,134 [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-10-10 14:48:31,135 [INFO] Added job "rotate_logs" to job store "default"
+2026-10-10 14:48:31,135 [INFO] Scheduler started
+2026-10-10 14:48:31,137 [INFO] System Health Update -> CPU: 0.0% | RAM: 89.6%
+2026-10-10 14:48:31,140 [INFO] AEGIS VAULT v2.5 SYSTEM ONLINE
+2026-10-10 14:48:31,152 [WARNING]  * Debugger is active!
+2026-10-10 14:48:31,157 [INFO]  * Debugger PIN: 114-675-641
+2026-10-10 14:49:30,475 [INFO] System Health Update -> CPU: 9.8% | RAM: 88.5%
+2026-10-10 14:49:31,139 [INFO] System Health Update -> CPU: 9.7% | RAM: 88.3%
+2026-10-10 14:50:30,477 [INFO] System Health Update -> CPU: 16.8% | RAM: 96.3%
+2026-10-10 14:50:31,140 [INFO] System Health Update -> CPU: 16.8% | RAM: 96.2%
+2026-10-10 14:51:30,479 [INFO] System Health Update -> CPU: 16.5% | RAM: 98.3%
+2026-10-10 14:51:31,142 [INFO] System Health Update -> CPU: 16.6% | RAM: 98.2%
+2026-10-10 14:52:30,482 [INFO] System Health Update -> CPU: 21.3% | RAM: 88.2%
+2026-10-10 14:52:31,143 [INFO] System Health Update -> CPU: 21.3% | RAM: 88.3%
+2026-10-10 14:53:30,483 [INFO] System Health Update -> CPU: 25.0% | RAM: 94.8%
+2026-10-10 14:53:31,144 [INFO] System Health Update -> CPU: 25.1% | RAM: 94.7%
+2026-10-10 14:54:30,484 [INFO] System Health Update -> CPU: 14.4% | RAM: 86.2%
+2026-10-10 14:54:31,146 [INFO] System Health Update -> CPU: 14.3% | RAM: 86.2%
+2026-10-10 14:55:30,498 [INFO] System Health Update -> CPU: 50.9% | RAM: 87.9%
+2026-10-10 14:55:31,156 [INFO] System Health Update -> CPU: 51.6% | RAM: 88.0%
+2026-10-10 14:56:30,513 [INFO] System Health Update -> CPU: 77.9% | RAM: 86.7%
+2026-10-10 14:56:31,172 [INFO] System Health Update -> CPU: 78.1% | RAM: 86.7%
+2026-10-10 14:57:30,527 [INFO] System Health Update -> CPU: 88.1% | RAM: 86.5%
+2026-10-10 14:57:31,187 [INFO] System Health Update -> CPU: 88.1% | RAM: 86.5%
+2026-10-10 14:58:30,549 [INFO] System Health Update -> CPU: 89.0% | RAM: 84.7%
+2026-10-10 14:58:31,198 [INFO] System Health Update -> CPU: 89.0% | RAM: 84.6%
+2026-10-10 14:59:30,571 [INFO] System Health Update -> CPU: 89.1% | RAM: 84.8%
+2026-10-10 14:59:31,236 [INFO] System Health Update -> CPU: 89.1% | RAM: 84.8%
+2026-10-10 15:00:30,588 [INFO] System Health Update -> CPU: 89.3% | RAM: 84.8%
+2026-10-10 15:00:31,271 [INFO] System Health Update -> CPU: 89.3% | RAM: 84.9%
+2026-10-10 15:01:30,601 [INFO] System Health Update -> CPU: 88.3% | RAM: 85.2%
+2026-10-10 15:01:31,284 [INFO] System Health Update -> CPU: 88.3% | RAM: 85.2%
+2026-10-10 15:02:30,662 [INFO] System Health Update -> CPU: 87.4% | RAM: 85.0%
+2026-10-10 15:02:31,362 [INFO] System Health Update -> CPU: 87.3% | RAM: 85.0%
+2026-10-10 15:03:30,691 [INFO] System Health Update -> CPU: 84.4% | RAM: 84.5%
+2026-10-10 15:03:31,411 [INFO] System Health Update -> CPU: 84.5% | RAM: 84.5%
+2026-10-10 15:04:30,704 [INFO] System Health Update -> CPU: 84.3% | RAM: 84.3%
+2026-10-10 15:04:31,427 [INFO] System Health Update -> CPU: 84.2% | RAM: 84.3%
+2026-10-10 15:05:30,721 [INFO] System Health Update -> CPU: 84.3% | RAM: 83.6%
+2026-10-10 15:05:31,440 [INFO] System Health Update -> CPU: 84.3% | RAM: 83.6%
+2026-10-10 15:06:30,746 [INFO] System Health Update -> CPU: 83.1% | RAM: 83.2%
+2026-10-10 15:06:31,454 [INFO] System Health Update -> CPU: 83.1% | RAM: 83.2%
+2026-10-10 15:07:30,781 [INFO] System Health Update -> CPU: 88.3% | RAM: 83.7%
+2026-10-10 15:07:31,473 [INFO] System Health Update -> CPU: 88.3% | RAM: 83.7%
+2026-10-10 15:08:30,795 [INFO] System Health Update -> CPU: 84.9% | RAM: 83.5%
+2026-10-10 15:08:31,493 [INFO] System Health Update -> CPU: 84.7% | RAM: 83.5%
+2026-10-10 15:09:30,818 [INFO] System Health Update -> CPU: 79.4% | RAM: 83.4%
+2026-10-10 15:09:31,504 [INFO] System Health Update -> CPU: 79.5% | RAM: 83.5%
+2026-10-10 15:10:30,832 [INFO] System Health Update -> CPU: 80.3% | RAM: 83.0%
+2026-10-10 15:10:31,514 [INFO] System Health Update -> CPU: 80.3% | RAM: 83.0%
+2026-10-10 15:11:30,846 [INFO] System Health Update -> CPU: 78.8% | RAM: 83.0%
+2026-10-10 15:11:31,523 [INFO] System Health Update -> CPU: 78.7% | RAM: 83.0%
+2026-10-10 15:12:30,857 [INFO] System Health Update -> CPU: 77.7% | RAM: 82.5%
+2026-10-10 15:12:31,532 [INFO] System Health Update -> CPU: 77.6% | RAM: 82.6%
+2026-10-10 15:13:30,873 [INFO] System Health Update -> CPU: 74.7% | RAM: 82.3%
+2026-10-10 15:13:31,543 [INFO] System Health Update -> CPU: 74.9% | RAM: 82.3%
+2026-10-10 15:14:59,292 [INFO] System Health Update -> CPU: 24.6% | RAM: 82.1%
+2026-10-10 15:15:59,294 [INFO] System Health Update -> CPU: 17.8% | RAM: 86.8%
+2026-10-10 15:15:59,350 [INFO] System Health Update -> CPU: 17.8% | RAM: 86.8%
+2026-10-10 15:16:59,298 [INFO] System Health Update -> CPU: 12.1% | RAM: 83.7%
+2026-10-10 15:16:59,373 [INFO] System Health Update -> CPU: 12.1% | RAM: 83.7%
+2026-10-10 15:17:59,301 [INFO] System Health Update -> CPU: 11.2% | RAM: 85.4%
+2026-10-10 15:17:59,374 [INFO] System Health Update -> CPU: 11.2% | RAM: 85.4%
+2026-10-10 15:18:59,303 [INFO] System Health Update -> CPU: 11.0% | RAM: 85.4%
+2026-10-10 15:18:59,377 [INFO] System Health Update -> CPU: 11.0% | RAM: 85.4%
+2026-10-10 15:19:59,306 [INFO] System Health Update -> CPU: 11.3% | RAM: 87.9%
+2026-10-10 15:19:59,379 [INFO] System Health Update -> CPU: 11.3% | RAM: 87.9%
+2026-10-10 15:20:59,309 [INFO] System Health Update -> CPU: 9.5% | RAM: 87.8%
+2026-10-10 15:20:59,382 [INFO] System Health Update -> CPU: 9.5% | RAM: 87.8%
+2026-10-10 15:21:59,315 [INFO] System Health Update -> CPU: 11.0% | RAM: 87.6%
+2026-10-10 15:21:59,384 [INFO] System Health Update -> CPU: 11.0% | RAM: 87.6%
+2026-10-10 15:22:59,319 [INFO] System Health Update -> CPU: 11.4% | RAM: 86.3%
+2026-10-10 15:22:59,401 [INFO] System Health Update -> CPU: 11.4% | RAM: 86.3%
+2026-10-10 15:23:59,322 [INFO] System Health Update -> CPU: 12.2% | RAM: 85.2%
+2026-10-10 15:23:59,429 [INFO] System Health Update -> CPU: 12.2% | RAM: 85.2%
+2026-10-10 15:24:59,323 [INFO] System Health Update -> CPU: 12.0% | RAM: 85.6%
+2026-10-10 15:24:59,431 [INFO] System Health Update -> CPU: 12.0% | RAM: 85.7%
+2026-10-10 15:25:59,326 [INFO] System Health Update -> CPU: 11.6% | RAM: 85.6%
+2026-10-10 15:25:59,435 [INFO] System Health Update -> CPU: 11.6% | RAM: 85.5%
+2026-10-10 15:26:59,327 [INFO] System Health Update -> CPU: 12.5% | RAM: 85.7%
+2026-10-10 15:26:59,443 [INFO] System Health Update -> CPU: 12.5% | RAM: 85.7%
+2026-10-10 15:27:59,329 [INFO] System Health Update -> CPU: 11.4% | RAM: 87.2%
+2026-10-10 15:27:59,506 [INFO] System Health Update -> CPU: 11.3% | RAM: 87.2%
+2026-10-10 15:28:59,334 [INFO] System Health Update -> CPU: 11.4% | RAM: 86.8%
+2026-10-10 15:28:59,510 [INFO] System Health Update -> CPU: 11.5% | RAM: 86.7%
+2026-10-10 15:29:59,343 [INFO] System Health Update -> CPU: 11.2% | RAM: 87.7%
+2026-10-10 15:29:59,511 [INFO] System Health Update -> CPU: 11.2% | RAM: 87.7%
+2026-10-10 15:30:06,117 [INFO]  * Detected change in 'C:\\Users\\Gagan Deep\\Documents\\SECURE_WEB_APP\\app.py', reloading
+2026-10-10 15:30:06,246 [INFO]  * Restarting with stat
+2026-10-10 15:30:06,841 [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-10-10 15:30:06,843 [INFO] Added job "rotate_logs" to job store "default"
+2026-10-10 15:30:06,843 [INFO] Scheduler started
+2026-10-10 15:30:06,846 [INFO] System Health Update -> CPU: 0.0% | RAM: 87.8%
+2026-10-10 15:30:06,849 [INFO] AEGIS VAULT v2.5 SYSTEM ONLINE
+2026-10-10 15:30:06,858 [WARNING]  * Debugger is active!
+2026-10-10 15:30:06,860 [INFO]  * Debugger PIN: 114-675-641
+2026-10-10 15:30:59,530 [INFO] System Health Update -> CPU: 11.2% | RAM: 87.6%
+2026-10-10 15:31:06,864 [INFO] System Health Update -> CPU: 11.1% | RAM: 87.8%
+2026-10-10 15:31:59,533 [INFO] System Health Update -> CPU: 10.7% | RAM: 87.1%
+2026-10-10 15:32:06,868 [INFO] System Health Update -> CPU: 10.6% | RAM: 87.5%
+2026-10-10 15:32:59,535 [INFO] System Health Update -> CPU: 9.3% | RAM: 87.1%
+2026-10-10 15:33:06,874 [INFO] System Health Update -> CPU: 9.3% | RAM: 87.1%
+2026-10-10 15:33:59,537 [INFO] System Health Update -> CPU: 10.5% | RAM: 87.6%
+2026-10-10 15:34:06,885 [INFO] System Health Update -> CPU: 10.6% | RAM: 87.7%
+2026-10-10 15:34:59,539 [INFO] System Health Update -> CPU: 10.6% | RAM: 87.4%
+2026-10-10 15:35:06,888 [INFO] System Health Update -> CPU: 10.8% | RAM: 87.5%
+2026-10-10 15:35:59,543 [INFO] System Health Update -> CPU: 11.7% | RAM: 86.5%
+2026-10-10 15:36:06,892 [INFO] System Health Update -> CPU: 11.6% | RAM: 86.6%
+2026-10-10 15:36:59,545 [INFO] System Health Update -> CPU: 11.6% | RAM: 86.7%
+2026-10-10 15:37:07,054 [INFO] System Health Update -> CPU: 11.5% | RAM: 85.8%
+2026-10-10 15:37:59,548 [INFO] System Health Update -> CPU: 11.0% | RAM: 86.8%
+2026-10-10 15:38:07,061 [INFO] System Health Update -> CPU: 10.9% | RAM: 86.5%
+2026-10-10 15:38:59,550 [INFO] System Health Update -> CPU: 11.0% | RAM: 86.4%
+2026-10-10 15:39:07,064 [INFO] System Health Update -> CPU: 11.0% | RAM: 85.9%
+2026-10-10 15:39:59,551 [INFO] System Health Update -> CPU: 9.5% | RAM: 85.8%
+2026-10-10 15:40:07,066 [INFO] System Health Update -> CPU: 10.1% | RAM: 86.1%
