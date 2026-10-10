@@ -1,0 +1,17 @@
+{
+"version": 2,
+"rewrites": [
+{
+"source": "/api/(.)",
+"destination": "https://aegis-vault-backend-ae2a.onrender.com/api/$1"
+},
+{
+"source": "/vault",
+"destination": "https://aegis-vault-backend-ae2a.onrender.com/vault"
+},
+{
+"source": "/(.)",
+"destination": "/templates/main_landing_page.html"
+}
+]
+}
