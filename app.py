@@ -78,7 +78,12 @@ limiter = Limiter(
     storage_uri="memory://",
 )
 
-# --- DASHBOARD API ROUTES ---
+# --- DASHBOARD & HEALTH API ROUTES ---
+
+@app.route('/api/health')
+def health_check():
+    """Health check endpoint for Render monitoring"""
+    return jsonify({"status": "healthy", "service": "Aegis Vault Backend"}), 200
 
 @app.route('/api/download_audit')
 def download_audit():
@@ -123,7 +128,7 @@ def landing_page():
     except Exception:
         return render_template('index.html')
 
-@app.route('/app')
+@app.route('/vault')
 def operational_app():
     """Render the file encryption operational tool."""
     return render_template('index.html')
