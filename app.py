@@ -122,15 +122,10 @@ def get_status():
 
 @app.route('/')
 def landing_page():
-    """Render the main landing page first, with fallback to index if templates are flat."""
-    try:
-        return render_template('main_landing_page.html')
-    except Exception:
-        return render_template('index.html')
+    return render_template('main_landing_page.html')
 
 @app.route('/vault')
 def operational_app():
-    """Render the file encryption operational tool."""
     return render_template('index.html')
 
 # --- CORE API ENDPOINTS ---
